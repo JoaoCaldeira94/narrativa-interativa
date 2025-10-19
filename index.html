@@ -140,6 +140,8 @@ tw-story {
  tw-story {
  background-size: contain; /* mostra a imagem inteira */
  background-position: top center;
+   overflow-x: hidden; /* evita scroll horizontal */
+   overflow-y: hidden; /* evita scroll horizontal */
  }
   
 
@@ -153,40 +155,45 @@ tw-story {
 /* === Caixa de texto no topo === */
 .texto {
   position: absolute;
- /* top: 50%; /* podes ajustar verticalmente se quiseres 
   left: 50%;
-  transform: translateX(-50%) translateY(-50%);*/
-  
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  
-  padding: 1.5em;
+  transform: translateX(-50%);
+  margin-top: 1em;
+  padding: 1.5em 1.5em 1em 1.5em;
   border-radius: 8px;
-  border: 0px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.15);
   
+
+ /* border: 0px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 2px 1px rgba(64, 64, 64, 0.25);
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);*/
+
   display: inline-block;
   max-width: 90vw;
   white-space: normal;
-  
+
   font-family: 'Lexend', sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   color: #F8F6F0;
-  line-height: 1em;
-  
+  line-height: 1.3em;
+  text-shadow: 0px 0px 5px black;
+  letter-spacing: 0.03rem;
   text-align: center;
   z-index: 10;
-  
+
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+  will-change: backdrop-filter;
 }
 
+
 i{
-color: #eab11c;}
+color: #e1bf66;}
 
 audio {
 color: #F8F6F0;
- opacity: 30%;}
+ opacity: 40%;}
 
 /* === Botões no fundo fixo === */
 .botoes {
@@ -204,36 +211,54 @@ color: #F8F6F0;
 
 /* === Estilo dos links como botões === */
 tw-link {
-   display: inline-block;
-  padding: 0.6em 1.2em;
-  border-radius: 8px;
-  background-color: #333;
+  display: inline-block;
+  padding: 0.5em 2em;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
   color: #F8F6F0;
   text-decoration: none;
   font-family: 'Lexend', sans-serif;
   font-weight: 500;
-  font-size: 18px;
-  transition: background-color 0.2s, box-shadow 0.2s;
-  box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.15);
-  
-  
-background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  
- 
+  font-size: 20px;
+  letter-spacing: 0.04rem;
+  text-shadow: 0px 0px 5px black;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+  box-shadow: 0 0 2px 2px rgba(64, 64, 64, 0.40);
+  will-change: backdrop-filter;
 }
 
 tw-link:hover {
-  background-color: #555;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="seguinte" color="red"></tw-tag><tw-tag name="fundo1" color="red"></tw-tag><tw-tag name="fundo2" color="orange"></tw-tag><tw-tag name="fundo3" color="green"></tw-tag><tw-tag name="fundo4" color="yellow"></tw-tag><tw-tag name="fundo5" color="red"></tw-tag><tw-tag name="fundo6" color="red"></tw-tag><tw-tag name="fundo7" color="purple"></tw-tag><tw-passagedata pid="1" name="1" tags="ninhada fundo1" position="1000,350" size="100,100">&lt;div class=&quot;texto&quot;&gt;Era uma vez um pato de seu nome Carolino. Nasceu numa patacoada de 7 irmãos, todos eles idênticos, menos o Carolino. 
+  box-shadow: 0 0 15px 5px rgba(64, 64, 64, 0.25);
+  
+  
+background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  color: #F8F6F0;
+ 
+}
+
+
+.texto, .botoes, tw-link {
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, -webkit-backdrop-filter 0.4s ease;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">
+
+window.addEventListener("load", function () {
+    // Wait until everything (images, sounds, fonts, etc.) is fully loaded
+    setTimeout(function () {
+        // Show the story
+        $("#story").fadeIn(500); // You can use fadeIn or just show()
+    }, 100); // optional small delay (100ms)
+});</script><tw-tag name="seguinte" color="red"></tw-tag><tw-tag name="fundo1" color="red"></tw-tag><tw-tag name="fundo2" color="orange"></tw-tag><tw-tag name="fundo3" color="green"></tw-tag><tw-tag name="fundo4" color="yellow"></tw-tag><tw-tag name="fundo5" color="red"></tw-tag><tw-tag name="fundo6" color="red"></tw-tag><tw-tag name="fundo7" color="purple"></tw-tag><tw-passagedata pid="1" name="Início" tags="ninhada fundo1" position="1000,350" size="100,100">&lt;div class=&quot;texto&quot;&gt;Era uma vez um pato de seu nome Carolino. Nasceu numa &lt;i&gt;patacoada&lt;/i&gt; de 7 irmãos, todos eles idênticos, menos o Carolino. 
 
 &lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/1.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;
 &lt;/div&gt;
 
 &lt;div class=&quot;botoes&quot;&gt;
 
-[[2]]
+[[Continuar-&gt;2]]
 
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="2" name="2" tags="fundo2" position="1150,350" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino cedo percebeu que era diferente e tentou por inúmeras vezes ser aceite, mas sempre em vão.
@@ -247,33 +272,50 @@ tw-link:hover {
 
 [[Pinta-se com tinta]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Aceitar a ajuda" tags="fundo14" position="2375,600" size="100,100">O plano de Deolinda era tornarem-se patifes profissionais. Patolarápios, por assim dizer. Carolino era o aliado perfeito, era fofinho, pequenino e com um ar angelical. Deolinda explicou-lhe tudo tintim por tintim. Queria lançar Carolino como isco: enquanto o pato adorável entretinha, a raposa matreira assaltava. Faltava apenas decidir o que roubar
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="3" name="Aceitar a ajuda" tags="fundo14" position="2375,600" size="100,100">&lt;div class=&quot;texto&quot;&gt;O plano de Deolinda era tornarem-se &lt;i&gt;patifes&lt;/i&gt; profissionais. &lt;i&gt;Patolarápios&lt;/i&gt;, por assim dizer. Carolino era o aliado perfeito, era fofinho, pequenino e com um ar angelical. Deolinda explicou-lhe tudo tintim por tintim. Queria lançar Carolino como isco: enquanto o pato adorável entretinha, a raposa matreira assaltava. Faltava apenas decidir o que roubar.
+
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/14.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
+&lt;div class=&quot;botoes&quot;&gt;
 
 [[Sapatos]]
 
 [[Obras patéticas]]
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/14.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="4" name="Anda à porrada" tags="fundo6" position="1725,350" size="100,100">Carolino zangado com o mundo torna-se violento e desata a distribuir pancada sempre que se sente julgado.  Ele tenta abstrair-se, praticando técnicas de mindfullness mas era mais forte que ele. Já não tinhas penas suficientes para contar todas as tareias que foi dando. 
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="4" name="Anda à porrada" tags="fundo6" position="1725,350" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino zangado com o mundo torna-se violento e desata a distribuir pancada sempre que se sente julgado.  Ele tenta abstrair-se, praticando técnicas de mindfullness mas era mais forte que ele. Já não tinhas penas suficientes para contar todas as tareias que foi dando. 
 
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/6.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
+&lt;div class=&quot;botoes&quot;&gt;
 [[Foge]]
 
 [[Mata os irmãos]]
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/6.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="5" name="Confiar no Ernesto" tags="fundo25" position="2375,800" size="100,100">Carolino caiu que nem um pato. Ernesto fez-se passar por seu amigo, mas enganou Carolino ao engordá-lo e dar-lhe a sua anilha para que fosse abatido na sua vez.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="5" name="Confiar no Ernesto" tags="fundo25" position="2375,800" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino caiu que nem um pato. Ernesto fez-se passar por seu amigo, mas enganou Carolino ao engordá-lo e dar-lhe a sua anilha para que fosse abatido na sua vez.
 
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/25.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
+&lt;div class=&quot;botoes&quot;&gt;
 [[Que pena!]]
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/25.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="6" name="Dar ouvidos ao Ernesto" tags="fundo24" position="2225,800" size="100,100">Ao amanhecer Ernesto disse a Carolino que a surpresa era um passaporte para um mundo ideal. Carolino só tinha que colocar no seu tornozelo a anilha que Ernesto tinha na sua pata e seguir para um tapete mágico que o levaria a um paraíso dos patos, onde eram todos iguais e nunca mais seria excluído.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="6" name="Dar ouvidos ao Ernesto" tags="fundo24" position="2225,800" size="100,100">&lt;div class=&quot;texto&quot;&gt;Ao amanhecer Ernesto disse a Carolino que a surpresa era um passaporte para um mundo ideal. Carolino só tinha que colocar no seu tornozelo a anilha que Ernesto tinha na sua pata e seguir para um tapete mágico que o levaria a um paraíso dos patos, onde eram todos iguais e nunca mais seria excluído.
 
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/24.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
+&lt;div class=&quot;botoes&quot;&gt;
 [[Confiar no Ernesto]]
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/24.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="7" name="Foge" tags="fundo11" position="1825,600" size="100,100">Carolino despatou-se, rompendo o passo com uma urgência quase aquática. Corria o mais que podia, querendo apenas anular a dor e mergulhar num futuro limpo. A sua esperança era patente: encontrar um pequeno lago seguro onde, finalmente, fosse recebido, acolhido e amado.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="7" name="Foge" tags="fundo11" position="1825,600" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino &lt;i&gt;despatou-se&lt;/i&gt;, rompendo o passo com uma urgência quase aquática. Corria o mais que podia, querendo apenas anular a dor e mergulhar num futuro limpo. A sua esperança era &lt;i&gt;patente&lt;/i&gt;: encontrar um pequeno lago seguro onde, finalmente, fosse recebido, acolhido e amado.
+
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/11.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
+&lt;div class=&quot;botoes&quot;&gt;
 
 [[Foge para a floresta]]
 
 [[Foge para o aviário]]
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/11.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="8" name="Foge para a floresta" tags="fundo12" position="2050,600" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino chegou a uma floresta, era densa, escura e silenciosa. Estava molhado, com frio, com fome e muito assustado. Sempre se sentiu sozinho, mesmo quando estava junto dos seus, mas agora a solidão parecia ser ainda maior. O medo estava entranhado em cada passo, era só um pato num mundo de predadores.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="8" name="Foge para a floresta" tags="fundo12" position="2050,600" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino chegou a uma floresta, era densa, escura e silenciosa. Estava molhado, com frio, com fome e muito assustado. Sempre se sentiu sozinho, mesmo quando estava junto dos seus, mas agora a solidão parecia ser ainda maior. O medo estava entranhado em cada passo, era só um pato num mundo de predadores.
 
 &lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/12.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;
 
@@ -285,56 +327,80 @@ tw-link:hover {
 
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="9" name="Foge para o aviário" tags="fundo22" position="1825,775" size="100,100">Era noite cerrada, este sítio parece ser acolhedor, tem luz, é quente e está cheio, dado o barulho que dali vem. &quot;Espero que também tenha comida&quot;, pensou Carolino.
+</tw-passagedata><tw-passagedata pid="9" name="Foge para o aviário" tags="fundo22" position="1825,775" size="100,100">&lt;div class=&quot;texto&quot;&gt;Era noite cerrada, este sítio parece ser acolhedor, tem luz, é quente e está cheio, dado o barulho que dali vem. &quot;Espero que também tenha comida&quot;, pensou Carolino.
 
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/22.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
+&lt;div class=&quot;botoes&quot;&gt;
 [[Foge para a floresta]]
 
 [[Tenta integrar-se]]
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/22.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="10" name="Mata os irmãos" tags="fundo7" position="1925,350" size="100,100">Carolino num surto psicopato mata os irmãos. Nunca pensou estar envolvido num cenário tão sangrento e dantesco como o que ele próprio acabava de protagonizar.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Mata os irmãos" tags="fundo7" position="1925,350" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino num surto &lt;i&gt;psicopato&lt;/i&gt; mata os irmãos. Nunca pensou estar envolvido num cenário tão sangrento e dantesco como o que ele próprio acabava de protagonizar.
+
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/7.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
+&lt;div class=&quot;botoes&quot;&gt;
 
 [[Foge]]
 
 [[Vai à patoterapia]]
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/7.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="11" name="Next" tags="fundo19" position="3100,525" size="100,100">Carolino no dia seguinte é presente ao juiz. A patosentença não tardou a chegar. Não há perdão para Carolino, apesar de se mostrar muito arrependido. Ainda que com uma infância marcada por muitos traumas, para a lei nada justificaria os crimes que Carolino havia cometido.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="11" name="Next" tags="fundo19" position="3100,525" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino no dia seguinte é presente ao juiz. A &lt;i&gt;patosentença&lt;/i&gt; não tardou a chegar. Não há perdão para Carolino, apesar de se mostrar muito arrependido. Ainda que com uma infância marcada por muitos traumas, para a lei nada justificaria os crimes que Carolino havia cometido.
+
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/19.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
+&lt;div class=&quot;botoes&quot;&gt;
 
 [[Que pena!]]
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/19.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="12" name="Obras patéticas" tags="fundo16" position="2600,700" size="100,100">Rumaram a Paris, o destino perfeito. O Louvre estava lotado de obras patéticas, daquelas muito valiosas e com um sentido estético muito duvidável. Depois era só vendê-las no mercado negro e dividir os lucros. Mas logo no primeiro assalto, noite escura e fria em Paris, o alarme do Louvre soo
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Obras patéticas" tags="fundo16" position="2600,700" size="100,100">&lt;div class=&quot;texto&quot;&gt;Rumaram a Paris, o destino perfeito. O Louvre estava lotado de obras &lt;i&gt;patéticas&lt;/i&gt;, daquelas muito valiosas e com um sentido estético muito duvidável. Depois era só vendê-las no mercado negro e dividir os lucros. Mas logo no primeiro assalto, noite escura e fria em Paris, o alarme do Louvre soou.
 
-[[Próximo?]]
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/16.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/16.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="13" name="Pinta-se com tinta" tags="fundo4" position="1300,475" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino cobriu-se com tinta que comprou na Loja da D. Patoícia. Tudo o que mais queria era ser acolhido pela família.
+&lt;div class=&quot;botoes&quot;&gt;
+
+[[Continuar-&gt;Próximo?]]
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="13" name="Pinta-se com tinta" tags="fundo4" position="1300,475" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino cobriu-se com tinta que comprou na Loja da D. &lt;i&gt;Patoícia&lt;/i&gt;. Tudo o que mais queria era ser acolhido pela família.
 
 &lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/4.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;
 
 
 &lt;/div&gt;
 
+&lt;div class=&quot;botoes&quot;&gt;[[Continuar-&gt;Seguinte]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Procura um aliado" tags="fundo13" position="2225,600" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino caminhou pela floresta, abrigou-se numa toca e enroscou-se para se aquecer. Quando amanheceu apercebeu-se que estava aninhado a uma raposa também ela solitária. Apavorado por ser uma presa perfeita, Carolino prepara-se para sair dali quando ouve a raposa Deolinda: &quot;Estamos no mesmo barco, estou mesmo a precisar de ti para um plano que tenho. Tu ajudas-me e eu ajudo-te&quot;
+
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/13.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
 &lt;div class=&quot;botoes&quot;&gt;
 
-
-[[Seguinte]]
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="14" name="Procura um aliado" tags="fundo13" position="2225,600" size="100,100">Carolino caminhou pela floresta, abrigou-se numa toca e enroscou-se para se aquecer. Quando amanheceu apercebeu-se que estava aninhado a uma raposa também ela solitária. Apavorado por ser uma presa perfeita, Carolino prepara-se para sair dali quando ouve a raposa Deolinda: &quot;Estamos no mesmo barco, estou mesmo a precisar de ti para um plano que tenho. Tu ajudas-me e eu ajudo-te&quot;
-
 [[Aceitar a ajuda]]
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="15" name="Próximo" tags="fundo10" position="2450,325" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino estava muito arrependido de tudo o que tinha feito. Aprendeu que todos são merecedores de perdão e de uma segunda oportunidade. Carolino e Joaquim vivem agora num &quot;felizes para sempre&quot; numa relação &lt;i&gt;patossexual&lt;/i&gt; assumida.
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/13.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="15" name="Próximo" tags="fundo10" position="2450,325" size="100,100">Carolino estava muito arrependido de tudo o que tinha feito. Aprendeu que todos são merecedores de perdão e de uma segunda oportunidade. Carolino e Joaquim vivem agora num &quot;felizes para sempre&quot; numa relação patossexual assumida.
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/10.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Próximo?" tags="fundo17" position="2775,600" size="100,100">&lt;div class=&quot;texto&quot;&gt;Quando a polícia chegou, Carolino aproxima-se das lanternas e faz os seus melhores olhinhos de gato das botas. Um polícia quase que se comoveu, mas logo a seguir apercebeu-se que ele também era cúmplice. Carolino e Deolinda desatam a correr à frente da polícia.
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/10.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="16" name="Próximo?" tags="fundo17" position="2775,600" size="100,100">Quando a polícia chegou, Carolino aproxima-se das lanternas e faz os seus melhores olhinhos de gato das botas. Um polícia quase que se comoveu, mas logo a seguir apercebeu-se que ele também era cúmplice. Carolino e Deolinda desatam a correr à frente da polícia.
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/17.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
+&lt;div class=&quot;botoes&quot;&gt;
 
 [[Seguir o pato]]
 
 [[Seguir a raposa]]
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/17.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="17" name="Que pena!" tags="fundo20" position="3150,1100" size="100,100">Carolino é cozido e vira ARROZ DE PATO. O Fim de Carolino é triste para ele, mas delicioso para quem o saboreou.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Que pena!" tags="fundo20" position="3150,1100" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino é cozido e vira arroz de pato. O fim de Carolino é triste para ele, mas delicioso para quem o saboreou.
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/20.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="18" name="Sapatos" tags="fundo15" position="2600,500" size="100,100">Rumaram a Felgueiras, capital portuguesa do calçado. Assaltar fábricas que produzem para grandes marcas mundiais. Depois vendê-los no mercado negro, pareceu-lhes o ideal. Mas logo no primeiro assalto, já a noite ia escura, o alarme da fábrica soou bem alto.
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/20.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Sapatos" tags="fundo15" position="2600,500" size="100,100">&lt;div class=&quot;texto&quot;&gt;Rumaram a Felgueiras, capital portuguesa do calçado. Assaltar fábricas que produzem para grandes marcas mundiais. Depois vendê-los no mercado negro, pareceu-lhes o ideal. Mas logo no primeiro assalto, já a noite ia escura, o alarme da fábrica soou bem alto.
 
-[[Próximo?]]
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/15.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/15.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="19" name="Seguinte" tags="fundo5" position="1450,350" size="100,100">&lt;div class=&quot;texto&quot;&gt;No entanto, o lar era, patentemente, o epicentro do martírio. O clã familiar mantinha Carolino num ciclo implacável de bullying. A sua patética dignidade era dilacerada e a comunidade limitava-se a olhar para ele com apatia.
+&lt;div class=&quot;botoes&quot;&gt;
+
+[[Continuar-&gt;Próximo?]]
+&lt;/div&gt;
+</tw-passagedata><tw-passagedata pid="19" name="Seguinte" tags="fundo5" position="1450,350" size="100,100">&lt;div class=&quot;texto&quot;&gt;No entanto, o lar era, &lt;i&gt;patentemente&lt;/i&gt;, o epicentro do martírio. O clã familiar mantinha Carolino num ciclo implacável de bullying. A sua &lt;i&gt;patética&lt;/i&gt; dignidade era dilacerada e a comunidade limitava-se a olhar para ele com &lt;i&gt;apatia&lt;/i&gt;.
 
 &lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/5.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;
 
@@ -344,24 +410,34 @@ tw-link:hover {
 
 [[Foge]]
 
-[[Anda à porrada]]
+[[Anda à patada-&gt;Anda à porrada]]
 
 &lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="20" name="Seguir a raposa" tags="fundo21" position="2925,725" size="100,100">Deolinda era uma raposa astuta, experiente nesta vida de assaltante. Tem uma mestria sem igual em esconder-se. Ganha uma velocidade estonteante que nem dá hipóteses aos polícias. Consegue com as suas habilidades escapar, despistando as autoridades.
+</tw-passagedata><tw-passagedata pid="20" name="Seguir a raposa" tags="fundo21" position="2925,725" size="100,100">&lt;div class=&quot;texto&quot;&gt;Deolinda era uma raposa astuta, experiente nesta vida de assaltante. Tem uma mestria sem igual em esconder-se. Ganha uma velocidade estonteante que nem dá hipóteses aos polícias. Consegue com as suas habilidades escapar, despistando as autoridades.
+
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/21.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
+&lt;div class=&quot;botoes&quot;&gt;
 
 [[Seguir o pato]]
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/21.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="21" name="Seguir o pato" tags="fundo18" position="2925,525" size="100,100">Carolino correu o mais que pôde. Nunca antes tinha corrido assim. Fintou os polícias que o perseguiam. Mas estavam cada vez mais próximos, até que Carolino viu-se numa encruzilhada, com polícias em todas as direções. Carolino não tinha saída. Voltou a fazer os olhinhos de gato das botas e ofereceu as asas para ser algemado.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="21" name="Seguir o pato" tags="fundo18" position="2925,525" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino correu o mais que pôde. Nunca antes tinha corrido assim. Fintou os polícias que o perseguiam. Mas estavam cada vez mais próximos, até que Carolino viu-se numa encruzilhada, com polícias em todas as direções. Carolino não tinha saída. Voltou a fazer os olhinhos de gato das botas e ofereceu as asas para ser algemado.
 
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/18.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
 
-[[Next]]
+&lt;div class=&quot;botoes&quot;&gt;
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/18.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="22" name="Tenta integrar-se" tags="fundo23" position="2050,800" size="100,100">Carolino conhece um frango, de seu nome Ernesto. Uma simpatia com penas. Ofereceu-lhe uma visita guiada. Ouviu os desabados de Carolino e deu-lhe tanta comida, para além de lhe ter contado muitas patranhas de todos os frangos que ali moravam. Nessa noite Carolino dormiu aconchegado e com a promessa que no dia seguinte Ernesto tinha uma surpresa para ele
+[[Continuar-&gt;Next]]
 
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="22" name="Tenta integrar-se" tags="fundo23" position="2050,800" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino conhece um frango, de seu nome Ernesto. Uma simpatia com penas. Ofereceu-lhe uma visita guiada. Ouviu os desabafos de Carolino e deu-lhe tanta comida, para além de lhe ter contado muitas patranhas de todos os frangos que ali moravam. Nessa noite Carolino dormiu aconchegado e com a promessa que no dia seguinte Ernesto tinha uma surpresa para ele.
+
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/23.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
+&lt;div class=&quot;botoes&quot;&gt;
 [[Dar ouvidos ao Ernesto]]
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/23.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="23" name="Vai para a patoterapia" tags="fundo3" position="1300,200" size="100,100">&lt;div class=&quot;texto&quot;&gt;Na &lt;i&gt;patoterapia&lt;/i&gt; Carolino percebeu que tinha uma &lt;i&gt;patologia&lt;/i&gt; e até se queixava sistematicamente de pator de cabeça.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Vai para a patoterapia" tags="fundo3" position="1300,200" size="100,100">&lt;div class=&quot;texto&quot;&gt;Na &lt;i&gt;patoterapia&lt;/i&gt; Carolino percebeu que tinha uma &lt;i&gt;patologia&lt;/i&gt; e até se queixava sistematicamente de pator de cabeça.
 
 &lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/3.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;
 
@@ -369,19 +445,27 @@ tw-link:hover {
 
 &lt;div class=&quot;botoes&quot;&gt;
 
-[[Seguinte]]
+[[Continuar-&gt;Seguinte]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Vai à patoterapia" tags="fundo3" position="2100,350" size="100,100">Para o Carolino a patoterapia era um refúgio, mas estava muito confuso. Sentia-se entre o arroz e o pato.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="24" name="Vai à patoterapia" tags="fundo3" position="2100,350" size="100,100">&lt;div class=&quot;texto&quot;&gt;Para o Carolino a &lt;i&gt;patoterapia&lt;/i&gt; era um refúgio, mas estava muito confuso. Sentia-se entre o arroz e o pato.
+
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/8.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
+&lt;div class=&quot;botoes&quot;&gt;
 
 [[Foge]]
 
 [[É internado]]
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/8.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata><tw-passagedata pid="25" name="É internado" tags="fundo9" position="2275,325" size="100,100">Depois de ter aceitado ser internado numa patunidade de Saúde Mental, Carolino rejuvenesceu. Ali era bem aceite por todos e descobriu que era possível ser feliz. Carolino era medicado, sentia-se integrado, ajudava nas tarefas quotidianas. Fez novos amigos e apaixonou-se pelo pato Joaquim.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="25" name="É internado" tags="fundo9" position="2275,325" size="100,100">&lt;div class=&quot;texto&quot;&gt;Depois de ter aceitado ser internado numa &lt;i&gt;patunidade&lt;/i&gt; de Saúde Mental, Carolino rejuvenesceu. Ali era bem aceite por todos e descobriu que era possível ser feliz. Carolino era medicado, sentia-se integrado, ajudava nas tarefas quotidianas. Fez novos amigos e apaixonou-se pelo pato Joaquim.
 
-[[Próximo]]
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/9.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/9.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;</tw-passagedata></tw-storydata>
+&lt;div class=&quot;botoes&quot;&gt;
+
+[[Continuar-&gt;Próximo]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Passagem sem Título" tags="" position="1025,125" size="100,100">&lt;&lt;run $(&quot;#story&quot;).hide()&gt;&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
