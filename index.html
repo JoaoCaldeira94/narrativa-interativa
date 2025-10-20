@@ -9,7 +9,7 @@
 </head>
 <body>
 <tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play Teste5.</tw-noscript></noscript></tw-story>
-<tw-storydata name="Teste5" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="a1104dd4-2583-4e64-a87d-3faccaf076a1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* Fundo quando a passagem tem a tag "ceu" */
+<tw-storydata name="Teste5" startnode="1" creator="Twine" creator-version="2.10.0" format="Harlowe" format-version="3.3.9" ifid="a1104dd4-2583-4e64-a87d-3faccaf076a1" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/* === Fundo quando a cada passagem === */
 tw-story[tags~="fundo1"] {
  background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img1.jpg");
 }
@@ -118,7 +118,7 @@ tw-story[tags~="fundo25"] {
 
 
 
-/* Fundo por omissão (todas as passagens) */
+/* === Fundo por omissão (todas as passagens) === */
 tw-story {
   padding: 0;
   margin: 0;
@@ -138,10 +138,14 @@ tw-story {
 /* Ajustes extra para ecrãs pequenos (telefones) */
 @media (max-width: 768px) {
  tw-story {
- background-size: contain; /* mostra a imagem inteira */
- background-position: top center;
+   
+    background-size: cover; /* preenche o ecrã */
+ background-position: center center;
+ background-repeat: no-repeat;
+ /*background-size: contain; /*
+ background-position: top center; */
    overflow-x: hidden; /* evita scroll horizontal */
-   overflow-y: hidden; /* evita scroll horizontal */
+   overflow-y: hidden; /* evita scroll vertical */
  }
   
 
@@ -170,12 +174,12 @@ tw-story {
   -webkit-backdrop-filter: blur(1px);*/
 
   display: inline-block;
-  max-width: 90vw;
+  max-width: 95vw;
   white-space: normal;
 
   font-family: 'Lexend', sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 22px;
   color: #F8F6F0;
   line-height: 1.3em;
   text-shadow: 0px 0px 5px black;
@@ -187,6 +191,10 @@ tw-story {
   will-change: backdrop-filter;
 }
 
+@media (max-width: 768px) {
+  .texto {
+    font-size: 20px;}
+}
 
 i{
 color: #e1bf66;}
@@ -207,6 +215,20 @@ color: #F8F6F0;
   z-index: 20;
   
   
+}
+
+/* === Nomes Créditos == */
+
+.creditos {
+  font-size: 18px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  opacity: 30%;
+  left: 2em;
+  bottom: 2em;
+  position: fixed;
+  line-height: 1.5em;
+  letter-spacing: 0.03rem;
 }
 
 /* === Estilo dos links como botões === */
@@ -256,12 +278,18 @@ window.addEventListener("load", function () {
 &lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/1.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;
 &lt;/div&gt;
 
+&lt;div class=&quot;creditos&quot;&gt;
+João Caldeira
+João Carramanho
+Laura Benedito
+Lisandra Caldeira
+&lt;/div&gt;
 &lt;div class=&quot;botoes&quot;&gt;
 
 [[Continuar-&gt;2]]
 
 &lt;/div&gt;
-</tw-passagedata><tw-passagedata pid="2" name="2" tags="fundo2" position="1150,350" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino cedo percebeu que era diferente e tentou por inúmeras vezes ser aceite, mas sempre em vão.
+</tw-passagedata><tw-passagedata pid="2" name="2" tags="fundo2" position="1150,350" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino cedo percebeu que era diferente e tentou por imensas vezes ser aceite, mas sempre em vão.
 
 &lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/2.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;
 &lt;/div&gt;
@@ -352,7 +380,7 @@ window.addEventListener("load", function () {
 
 &lt;div class=&quot;botoes&quot;&gt;
 
-[[Que pena!]]
+[[Conhece a pena-&gt;Que pena!]]
 
 &lt;/div&gt;</tw-passagedata><tw-passagedata pid="12" name="Obras patéticas" tags="fundo16" position="2600,700" size="100,100">&lt;div class=&quot;texto&quot;&gt;Rumaram a Paris, o destino perfeito. O Louvre estava lotado de obras &lt;i&gt;patéticas&lt;/i&gt;, daquelas muito valiosas e com um sentido estético muito duvidável. Depois era só vendê-las no mercado negro e dividir os lucros. Mas logo no primeiro assalto, noite escura e fria em Paris, o alarme do Louvre soou.
 
@@ -380,7 +408,17 @@ window.addEventListener("load", function () {
 &lt;/div&gt;
 </tw-passagedata><tw-passagedata pid="15" name="Próximo" tags="fundo10" position="2450,325" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino estava muito arrependido de tudo o que tinha feito. Aprendeu que todos são merecedores de perdão e de uma segunda oportunidade. Carolino e Joaquim vivem agora num &quot;felizes para sempre&quot; numa relação &lt;i&gt;patossexual&lt;/i&gt; assumida.
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/10.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Próximo?" tags="fundo17" position="2775,600" size="100,100">&lt;div class=&quot;texto&quot;&gt;Quando a polícia chegou, Carolino aproxima-se das lanternas e faz os seus melhores olhinhos de gato das botas. Um polícia quase que se comoveu, mas logo a seguir apercebeu-se que ele também era cúmplice. Carolino e Deolinda desatam a correr à frente da polícia.
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/10.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
+&lt;div class=&quot;creditos&quot;&gt;
+João Caldeira
+João Carramanho
+Laura Benedito
+Lisandra Caldeira
+&lt;/div&gt;
+&lt;div class=&quot;botoes&quot;&gt;
+[[Choca de novo 	&amp;#x21A9; -&gt;Início]]
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="16" name="Próximo?" tags="fundo17" position="2775,600" size="100,100">&lt;div class=&quot;texto&quot;&gt;Quando a polícia chegou, Carolino aproxima-se das lanternas e faz os seus melhores olhinhos de gato das botas. Um polícia quase que se comoveu, mas logo a seguir apercebeu-se que ele também era cúmplice. Carolino e Deolinda desatam a correr à frente da polícia.
 
 &lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/17.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
 
@@ -390,9 +428,21 @@ window.addEventListener("load", function () {
 
 [[Seguir a raposa]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Que pena!" tags="fundo20" position="3150,1100" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino é cozido e vira arroz de pato. O fim de Carolino é triste para ele, mas delicioso para quem o saboreou.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="17" name="Que pena!" tags="fundo20" position="3100,975" size="100,100">&lt;div class=&quot;texto&quot;&gt;Carolino é cozido e vira arroz de pato. O fim de Carolino é triste para ele, mas delicioso para quem o saboreou.
 
-&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/20.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Sapatos" tags="fundo15" position="2600,500" size="100,100">&lt;div class=&quot;texto&quot;&gt;Rumaram a Felgueiras, capital portuguesa do calçado. Assaltar fábricas que produzem para grandes marcas mundiais. Depois vendê-los no mercado negro, pareceu-lhes o ideal. Mas logo no primeiro assalto, já a noite ia escura, o alarme da fábrica soou bem alto.
+&lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/20.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
+
+&lt;div class=&quot;creditos&quot;&gt;
+João Caldeira
+João Carramanho
+Laura Benedito
+Lisandra Caldeira
+&lt;/div&gt;
+
+&lt;div class=&quot;botoes&quot;&gt;
+[[Oh, que pena! Choca de novo 	&amp;#x21A9;-&gt;Início]]
+
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="18" name="Sapatos" tags="fundo15" position="2600,500" size="100,100">&lt;div class=&quot;texto&quot;&gt;Rumaram a Felgueiras, capital portuguesa do calçado. Assaltar fábricas que produzem para grandes marcas mundiais. Depois vendê-los no mercado negro, pareceu-lhes o ideal. Mas logo no primeiro assalto, já a noite ia escura, o alarme da fábrica soou bem alto.
 
 &lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/15.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;&lt;/div&gt;
 
@@ -410,7 +460,7 @@ window.addEventListener("load", function () {
 
 [[Foge]]
 
-[[Anda à patada-&gt;Anda à porrada]]
+[[Anda à patatada-&gt;Anda à porrada]]
 
 &lt;/div&gt;
 
@@ -437,7 +487,7 @@ window.addEventListener("load", function () {
 &lt;div class=&quot;botoes&quot;&gt;
 [[Dar ouvidos ao Ernesto]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Vai para a patoterapia" tags="fundo3" position="1300,200" size="100,100">&lt;div class=&quot;texto&quot;&gt;Na &lt;i&gt;patoterapia&lt;/i&gt; Carolino percebeu que tinha uma &lt;i&gt;patologia&lt;/i&gt; e até se queixava sistematicamente de pator de cabeça.
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="23" name="Vai para a patoterapia" tags="fundo3" position="1300,200" size="100,100">&lt;div class=&quot;texto&quot;&gt;Na &lt;i&gt;patoterapia&lt;/i&gt; Carolino percebeu que tinha uma &lt;i&gt;patologia&lt;/i&gt; e até se queixava sistematicamente de &lt;i&gt;pator de cabeça&lt;/i&gt;.
 
 &lt;audio src=&quot;https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/3.mp3&quot; autoplay controls  controlsList=&quot;nodownload&quot;&gt;&lt;/audio&gt;
 
@@ -465,7 +515,9 @@ window.addEventListener("load", function () {
 
 [[Continuar-&gt;Próximo]]
 
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Passagem sem Título" tags="" position="1025,125" size="100,100">&lt;&lt;run $(&quot;#story&quot;).hide()&gt;&gt;</tw-passagedata></tw-storydata>
+&lt;/div&gt;</tw-passagedata><tw-passagedata pid="26" name="Passagem sem Título" tags="" position="1025,125" size="100,100">&lt;!-- Carregar os conteúdos primeiro --&gt;
+
+&lt;&lt;run $(&quot;#story&quot;).hide()&gt;&gt;</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
