@@ -222,6 +222,11 @@ color: #F8F6F0;
   z-index: 20;
 }
 
+@media (max-width: 768px) {
+  .botoes {
+    gap: 0.5em;}
+}
+
 
 /* === Nomes Créditos == */
 
@@ -238,14 +243,16 @@ color: #F8F6F0;
 }
 
 /* === Estilo dos links como botões === */
-tw-link {
+tw-link,
+tw-link:visited
+{
   display: inline-block;
   padding: 0.5em 2em;
   border-radius: 100px;
   background: rgba(255, 255, 255, 0.20);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-  color: #F8F6F0;
+  color: #F8F6F0 !important;
   text-decoration: none;
   font-family: 'Lexend', sans-serif;
   font-weight: 500;
@@ -256,6 +263,8 @@ tw-link {
   box-shadow: 0 0 2px 2px rgba(64, 64, 64, 0.40);
   will-change: backdrop-filter;
 }
+
+
 
 tw-link:hover {
   box-shadow: 0 0 15px 5px rgba(64, 64, 64, 0.25);
@@ -269,10 +278,13 @@ background: rgba(255, 255, 255, 0.15);
 }
 
 @media (max-width: 768px) {
-  tw-link {
-    padding: 0.3em 1em;
+  tw-link,
+  tw-link:visited{
+    padding: 0.5em 1.2em;
   font-size: 15px;
-  letter-spacing: 0;}
+  line-height: 1em;
+  letter-spacing: 0.05em;
+  color: #F8F6F0 !important;}
 }
 
 
