@@ -1,0 +1,714 @@
+:: StoryTitle
+PatinhoFeio_NarrativaVisualInterativa
+
+
+:: StoryData
+{
+  "ifid": "a1104dd4-2583-4e64-a87d-3faccaf076a1",
+  "format": "Harlowe",
+  "format-version": "3.3.9",
+  "start": "Introdução",
+  "tag-colors": {
+    "seguinte": "red",
+    "fundo1": "red",
+    "fundo2": "orange",
+    "fundo3": "green",
+    "fundo4": "yellow",
+    "fundo5": "red",
+    "fundo6": "red",
+    "fundo7": "purple"
+  },
+  "zoom": 1
+}
+
+
+:: 2 [fundo2] {"position":"1150,350","size":"100,100"}
+<div class="texto">Carolino cedo percebeu que era diferente e tentou por imensas vezes ser aceite, mas sempre em vão.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/2.mp3" autoplay controls  controlsList="nodownload"></audio>
+</div>
+
+<div class="botoes">
+
+[[Vai para a patoterapia]]
+
+[[Pinta-se com tinta]]
+
+</div>
+
+
+:: Aceitar a ajuda [fundo14] {"position":"2000,600","size":"100,100"}
+<div class="texto">O plano de Deolinda era tornarem-se <i>patifes</i> profissionais. <i>Patolarápios</i>, por assim dizer. Carolino era o aliado perfeito, era fofinho, pequenino e com um ar angelical. Deolinda explicou-lhe tudo tintim por tintim. Queria lançar Carolino como isco: enquanto o pato adorável entretinha, a raposa matreira assaltava. Faltava apenas decidir o que roubar.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/14.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+
+[[Sapatos]]
+
+[[Obras patéticas]]
+
+</div>
+
+
+:: Anda à porrada [fundo6] {"position":"1625,350","size":"100,100"}
+<div class="texto">Carolino zangado com o mundo torna-se violento e desata a distribuir pancada sempre que se sente julgado.  Ele tenta abstrair-se, praticando técnicas de mindfullness mas era mais forte que ele. Já não tinha penas suficientes para contar todas as tareias que foi dando. 
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/6.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+[[Foge]]
+
+[[Mata os irmãos]]
+
+</div>
+
+
+:: Carregamento {"position":"925,475","size":"100,100"}
+<!-- Carregar os conteúdos primeiro -->
+
+<<run $("#story").hide()>>
+
+
+
+:: Confiar no Ernesto [fundo25] {"position":"2000,800","size":"100,100"}
+<div class="texto">Carolino caiu que nem um pato. Ernesto fez-se passar por seu amigo, mas enganou Carolino ao engordá-lo e dar-lhe a sua anilha para que fosse abatido na sua vez.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/25.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+[[Que pena!]]
+
+</div>
+
+
+:: Dar ouvidos ao Ernesto [fundo24] {"position":"1850,800","size":"100,100"}
+<div class="texto">Ao amanhecer Ernesto disse a Carolino que a surpresa era um passaporte para um mundo ideal. Carolino só tinha que colocar no seu tornozelo a anilha que Ernesto tinha na sua pata e seguir para um tapete mágico que o levaria a um paraíso dos patos, onde eram todos iguais e nunca mais seria excluído.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/24.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+[[Desconfiar e fugir para a floresta->Foge para a floresta]]
+[[Confiar no Ernesto]]
+
+</div>
+
+
+:: Foge [fundo11] {"position":"1450,600","size":"100,100"}
+<div class="texto">Carolino <i>despatou-se</i>, rompendo o passo com uma urgência quase aquática. Corria o mais que podia, querendo apenas anular a dor e mergulhar num futuro limpo. A sua esperança era <i>patente</i>: encontrar um pequeno lago seguro onde, finalmente, fosse recebido, acolhido e amado.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/11.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+
+[[Foge para a floresta]]
+
+[[Foge para o aviário]]
+
+</div>
+
+
+:: Foge para a floresta [fundo12] {"position":"1675,600","size":"100,100"}
+<div class="texto">Carolino chegou a uma floresta, era densa, escura e silenciosa. Estava molhado, com frio, com fome e muito assustado. Sempre se sentiu sozinho, mesmo quando estava junto dos seus, mas agora a solidão parecia ser ainda maior. O medo estava entranhado em cada passo, era só um pato num mundo de predadores.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/12.mp3" autoplay controls  controlsList="nodownload"></audio>
+
+</div>
+
+<div class="botoes">
+
+[[Procura um aliado]]
+
+</div>
+
+
+
+
+:: Foge para o aviário [fundo22] {"position":"1450,775","size":"100,100"}
+<div class="texto">Era noite cerrada, este sítio parece ser acolhedor, tem luz, é quente e está cheio, dado o barulho que dali vem. "Espero que também tenha comida", pensou Carolino.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/22.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+[[Foge para a floresta]]
+
+[[Tenta integrar-se]]
+
+</div>
+
+
+:: Introdução [fundo0] {"position":"825,350","size":"100,100"}
+<div class="texto">No âmbito da unidade curricular Narrativas Visuais Interativas, queremos que conheça o conto do <i>Patinho Feio</i> de uma outra perspetiva.
+<br><br>Desengane-se quem pensa que esta é mais uma história fofinha de penas ao vento. Aqui a vida é dura, e o pato também tenta ser aceite, mas desafia leis de sanidade mental e o seu destino está nas tuas mãos.
+<br><br>Quer estejas no computador ou no telemóvel, sugerimos que utilizes auscultadores para uma experiência mais imersiva e inclusiva.<br><br>Porque esta nossa história não deixa <i>ninguém de fora</i>.
+
+
+</div>
+
+<div class="creditos" style="opacity: 100%;">
+João Caldeira
+João Carramanho
+Laura Benedito
+Lisandra Caldeira
+</div>
+<div class="botoes">
+
+[[Começa a chocar->Início]]
+
+</div>
+
+
+
+:: Início [ninhada fundo1] {"position":"1000,350","size":"100,100"}
+<div class="texto">Era uma vez um pato de seu nome Carolino. Nasceu numa <i>patacoada</i> de 7 irmãos, todos eles idênticos, menos o Carolino. 
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/1.mp3" autoplay controls  controlsList="nodownload"></audio>
+</div>
+
+
+<div class="botoes">
+
+[[Continuar->2]]
+
+</div>
+
+
+
+:: Mata os irmãos [fundo7] {"position":"1825,350","size":"100,100"}
+<div class="texto">Carolino num surto <i>psicopato</i> mata os irmãos. Nunca pensou estar envolvido num cenário tão sangrento e dantesco como o que ele próprio acabava de protagonizar.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/7.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+
+[[Foge]]
+
+[[Vai à patoterapia]]
+
+</div>
+
+
+:: Next [fundo19] {"position":"2675,550","size":"100,100"}
+<div class="texto">Carolino no dia seguinte é presente ao juiz. A <i>patosentença</i> não tardou a chegar. Não há perdão para Carolino, apesar de se mostrar muito arrependido. Ainda que com uma infância marcada por muitos traumas, para a lei nada justificaria os crimes que Carolino havia cometido.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/19.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+
+[[Conhece a pena->Que pena!]]
+
+</div>
+
+
+:: Obras patéticas [fundo16] {"position":"2175,725","size":"100,100"}
+<div class="texto">Rumaram a Paris, o destino perfeito. O Louvre estava lotado de obras <i>patéticas</i>, daquelas muito valiosas e com um sentido estético muito duvidável. Depois era só vendê-las no mercado negro e dividir os lucros. Mas logo no primeiro assalto, noite escura e fria em Paris, o alarme do Louvre soou.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/16.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+
+[[Continuar->Próximo?]]
+</div>
+
+
+
+:: Pinta-se com tinta [fundo4] {"position":"1300,475","size":"100,100"}
+<div class="texto">Carolino cobriu-se com tinta que comprou na Loja da D. <i>Patoícia</i>. Tudo o que mais queria era ser acolhido pela família.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/4.mp3" autoplay controls  controlsList="nodownload"></audio>
+
+
+</div>
+
+<div class="botoes">[[Continuar->Seguinte]]
+</div>
+
+
+:: Procura um aliado [fundo13] {"position":"1850,600","size":"100,100"}
+<div class="texto">Carolino caminhou pela floresta, abrigou-se numa toca e enroscou-se para se aquecer. Quando amanheceu apercebeu-se que estava aninhado a uma raposa também ela solitária. Apavorado por ser uma presa perfeita, Carolino prepara-se para sair dali quando ouve a raposa Deolinda: "Estamos no mesmo barco, estou mesmo a precisar de ti para um plano que tenho. Tu ajudas-me e eu ajudo-te"
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/13.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+
+[[Aceitar a ajuda]]
+</div>
+
+
+
+:: Próximo [fundo10] {"position":"2350,325","size":"100,100"}
+<div class="texto">Carolino estava muito arrependido de tudo o que tinha feito. Aprendeu que todos são merecedores de perdão e de uma segunda oportunidade. Carolino e Joaquim vivem agora num "felizes para sempre" numa relação <i>patossexual</i> assumida.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/10.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="creditos">
+João Caldeira
+João Carramanho
+Laura Benedito
+Lisandra Caldeira
+</div>
+<div class="botoes">
+[[Choca de novo 	&#x21A9; ->Início]]
+</div>
+
+
+:: Próximo? [fundo17] {"position":"2350,625","size":"100,100"}
+<div class="texto">Quando a polícia chegou, Carolino aproxima-se das lanternas e faz os seus melhores olhinhos de gato das botas. Um polícia quase que se comoveu, mas logo a seguir apercebeu-se que ele também era cúmplice. Carolino e Deolinda desatam a correr à frente da polícia.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/17.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+
+[[Seguir o pato]]
+
+[[Seguir a raposa]]
+
+</div>
+
+
+:: Que pena! [fundo20] {"position":"2600,950","size":"100,100"}
+<div class="texto">Carolino é cozido e vira arroz de pato. O fim de Carolino é triste para ele, mas delicioso para quem o saboreou.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/20.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="creditos">
+João Caldeira
+João Carramanho
+Laura Benedito
+Lisandra Caldeira
+</div>
+
+<div class="botoes">
+[[Oh, que pena! Choca de novo 	&#x21A9;->Início]]
+
+</div>
+
+
+:: Sapatos [fundo15] {"position":"2175,525","size":"100,100"}
+<div class="texto">Rumaram a Felgueiras, capital portuguesa do calçado. Assaltar fábricas que produzem para grandes marcas mundiais. Depois vendê-los no mercado negro, pareceu-lhes o ideal. Mas logo no primeiro assalto, já a noite ia escura, o alarme da fábrica soou bem alto.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/15.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+
+[[Continuar->Próximo?]]
+</div>
+
+
+
+:: Seguinte [fundo5] {"position":"1450,350","size":"100,100"}
+<div class="texto">No entanto, o lar era, <i>patentemente</i>, o epicentro do martírio. O clã familiar mantinha Carolino num ciclo implacável de bullying. A sua <i>patética</i> dignidade era dilacerada e a comunidade limitava-se a olhar para ele com <i>apatia</i>.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/5.mp3" autoplay controls  controlsList="nodownload"></audio>
+
+</div>
+
+<div class="botoes">
+
+[[Foge]]
+
+[[Anda à patatada->Anda à porrada]]
+
+</div>
+
+
+
+
+:: Seguir a raposa [fundo21] {"position":"2500,750","size":"100,100"}
+<div class="texto">Deolinda era uma raposa astuta, experiente nesta vida de assaltante. Tem uma mestria sem igual em esconder-se. Ganha uma velocidade estonteante que nem dá hipóteses aos polícias. Consegue com as suas habilidades escapar, despistando as autoridades.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/21.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+
+[[Seguir o pato]]
+
+</div>
+
+
+:: Seguir o pato [fundo18] {"position":"2500,550","size":"100,100"}
+<div class="texto">Carolino correu o mais que pôde. Nunca antes tinha corrido assim. Fintou os polícias que o perseguiam. Mas estavam cada vez mais próximos, até que Carolino viu-se numa encruzilhada, com polícias em todas as direções. Carolino não tinha saída. Voltou a fazer os olhinhos de gato das botas e ofereceu as asas para ser algemado.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/18.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+
+[[Continuar->Next]]
+
+</div>
+
+
+:: Tenta integrar-se [fundo23] {"position":"1675,800","size":"100,100"}
+<div class="texto">Carolino conhece um frango, de seu nome Ernesto. Uma simpatia com penas. Ofereceu-lhe uma visita guiada. Ouviu os desabafos de Carolino e deu-lhe tanta comida, para além de lhe ter contado muitas patranhas de todos os frangos que ali moravam. Nessa noite Carolino dormiu aconchegado e com a promessa que no dia seguinte Ernesto tinha uma surpresa para ele.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/23.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+
+[[Dar ouvidos ao Ernesto]]
+
+</div>
+
+
+:: Vai para a patoterapia [fundo3] {"position":"1300,200","size":"100,100"}
+<div class="texto">Na <i>patoterapia</i> Carolino percebeu que tinha uma <i>patologia</i> e até se queixava sistematicamente de <i>pator de cabeça</i>.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/3.mp3" autoplay controls  controlsList="nodownload"></audio>
+
+</div>
+
+<div class="botoes">
+
+[[Continuar->Seguinte]]
+
+</div>
+
+
+:: Vai à patoterapia [fundo3] {"position":"2000,350","size":"100,100"}
+<div class="texto">Para o Carolino a <i>patoterapia</i> era um refúgio, mas estava muito confuso. Sentia-se entre o arroz e o pato.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/8.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+
+[[Foge]]
+
+[[É internado]]
+
+</div>
+
+
+:: É internado [fundo9] {"position":"2175,325","size":"100,100"}
+<div class="texto">Depois de ter aceitado ser internado numa <i>patunidade</i> de Saúde Mental, Carolino rejuvenesceu. Ali era bem aceite por todos e descobriu que era possível ser feliz. Carolino era medicado, sentia-se integrado, ajudava nas tarefas quotidianas. Fez novos amigos e apaixonou-se pelo pato Joaquim.
+
+<audio src="https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/9.mp3" autoplay controls  controlsList="nodownload"></audio></div>
+
+<div class="botoes">
+
+[[Continuar->Próximo]]
+
+</div>
+
+
+:: StoryScript [script]
+
+
+window.addEventListener("load", function () {
+    // Wait until everything (images, sounds, fonts, etc.) is fully loaded
+    setTimeout(function () {
+        // Show the story
+        $("#story").fadeIn(500); // You can use fadeIn or just show()
+    }, 100); // optional small delay (100ms)
+});
+
+:: StoryStylesheet [stylesheet]
+/* === Fundo de cada passagem === */
+tw-story[tags~="fundo0"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img0.jpg");
+}
+
+tw-story[tags~="fundo1"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img1.jpg");
+}
+
+tw-story[tags~="fundo2"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img2.jpg");
+}
+
+tw-story[tags~="fundo3"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img3.jpg");
+}
+
+tw-story[tags~="fundo4"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img4.jpg");
+}
+
+tw-story[tags~="fundo5"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img5.jpg");
+}
+
+tw-story[tags~="fundo6"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img6.jpg");
+}
+
+tw-story[tags~="fundo7"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img7.jpg");
+}
+
+tw-story[tags~="fundo8"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img8.jpg");
+}
+
+tw-story[tags~="fundo9"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img9.jpg");
+}
+
+tw-story[tags~="fundo10"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img10.jpg");
+}
+
+tw-story[tags~="fundo11"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img11.jpg");
+}
+
+tw-story[tags~="fundo12"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img12.jpg");
+}
+
+tw-story[tags~="fundo13"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img13.jpg");
+}
+
+tw-story[tags~="fundo14"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img14.jpg");
+}
+
+tw-story[tags~="fundo15"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img15.jpg");
+}
+
+tw-story[tags~="fundo16"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img16.jpg");
+}
+
+tw-story[tags~="fundo17"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img17.jpg");
+}
+
+tw-story[tags~="fundo18"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img18.jpg");
+}
+
+
+tw-story[tags~="fundo19"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img19.jpg");
+}
+
+
+tw-story[tags~="fundo20"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img20.jpg");
+}
+
+
+tw-story[tags~="fundo21"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img21.jpg");
+}
+
+tw-story[tags~="fundo22"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img22.jpg");
+}
+
+tw-story[tags~="fundo23"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img23.jpg");
+}
+
+tw-story[tags~="fundo24"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img24.jpg");
+}
+
+tw-story[tags~="fundo25"] {
+ background-image: url("https://raw.githubusercontent.com/JoaoCaldeira94/narrativa-interativa/main/Img25.jpg");
+}
+
+
+
+
+
+
+/* === Fundo por omissão (todas as passagens) === */
+tw-story {
+  padding: 0;
+  margin: 0;
+ background-color: #000; /* fallback sólido */
+ color: white; /* texto legível */
+ background-size: cover; /* preenche o ecrã */
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-attachment: fixed;  /*mantém o fundo fixo ao rolar */
+ min-height: 100vh; /* garante altura mínima do ecrã */
+ width: 100%;
+ height: auto;
+ overflow-x: hidden; /* evita scroll horizontal */
+ box-sizing: border-box;
+}
+
+/* Ajustes extra para ecrãs pequenos (telefones) */
+@media (max-width: 768px) {
+ tw-story {
+   
+    background-size: cover; /* preenche o ecrã */
+ background-position: center center;
+ background-repeat: no-repeat;
+ /*background-size: contain; /*
+ background-position: top center; */
+   overflow-x: hidden; /* evita scroll horizontal */
+   overflow-y: hidden; /* evita scroll vertical */
+   
+    background-attachment: scroll !important;
+    background-position: center top !important;
+   
+ }
+  
+
+  
+}
+
+
+
+
+
+/* === Caixa de texto no topo === */
+.texto {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 1em;
+  padding: 1.5em 1.5em 1em 1.5em;
+  border-radius: 8px;
+  
+
+ /* border: 0px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 2px 1px rgba(64, 64, 64, 0.25);
+
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);*/
+
+  display: inline-block;
+  max-width: 95vw;
+  white-space: normal;
+
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: #F8F6F0;
+  line-height: 1.3em;
+  text-shadow: 0 0 5px black, 0 0 10px black;
+  letter-spacing: 0.03rem;
+  text-align: center;
+  z-index: 10;
+
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+  will-change: backdrop-filter;
+}
+
+tw-sidebar {
+display: none !important;}
+
+@media (max-width: 768px) {
+tw-sidebar {
+  display: none !important;}
+}
+
+@media (max-width: 768px) {
+  .texto {
+    padding: 0em !important;
+    top: 2em !important;
+    font-size: 16px;
+  width: 100%;
+    text-shadow: 0 0 3px black, 0 0 6px black;
+    
+  }
+}
+
+i{
+color: #e1bf66;}
+
+audio {
+color: #F8F6F0;
+ opacity: 40%;}
+
+@media (max-width: 768px) {
+  audio {
+    height: 35px;}
+}
+
+/* === Botões no fundo fixo === */
+.botoes {
+  position: fixed;
+  bottom: 2em;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  z-index: 20;
+}
+
+@media (max-width: 768px) {
+  .botoes {
+    gap: 0.5em;}
+}
+
+
+/* === Nomes Créditos == */
+
+.creditos {
+  font-size: 18px;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  opacity: 50%;
+  left: 2em;
+  bottom: 2em;
+  position: fixed;
+  line-height: 1.5em;
+  letter-spacing: 0.03rem;
+}
+
+@media (max-width: 768px) {
+
+.creditos {
+  font-size: 15px !important;
+  bottom: 8em !important;}
+}
+
+/* === Estilo dos links como botões === */
+tw-link,
+tw-link:visited
+{
+  display: inline-block;
+  padding: 0.5em 2em;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  color: #F8F6F0 !important;
+  text-decoration: none;
+  font-family: 'Lexend', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 0.04rem;
+  text-shadow: 0px 0px 5px black;
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+  box-shadow: 0 0 2px 2px rgba(64, 64, 64, 0.40);
+  will-change: backdrop-filter;
+}
+
+
+
+tw-link:hover {
+  box-shadow: 0 0 15px 5px rgba(64, 64, 64, 0.25);
+  
+  
+background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  color: #F8F6F0;
+ 
+}
+
+@media (max-width: 768px) {
+  tw-link,
+  tw-link:visited{
+    padding: 0.8em 1.2em;
+  font-size: 17px;
+  line-height: 1em;
+  letter-spacing: 0.03em;
+  color: #F8F6F0 !important;
+  text-align: center !important;}
+}
+
+
+.texto, .botoes, tw-link {
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, -webkit-backdrop-filter 0.4s ease;
+}
