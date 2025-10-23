@@ -131,7 +131,7 @@ tw-story {
  background-size: cover; /* preenche o ecrã */
  background-position: center center;
  background-repeat: no-repeat;
- /*background-attachment: fixed;  mantém o fundo fixo ao rolar */
+ background-attachment: fixed;  /*mantém o fundo fixo ao rolar */
  min-height: 100vh; /* garante altura mínima do ecrã */
  width: 100%;
  height: auto;
@@ -150,6 +150,9 @@ tw-story {
  background-position: top center; */
    overflow-x: hidden; /* evita scroll horizontal */
    overflow-y: hidden; /* evita scroll vertical */
+   
+    background-attachment: scroll !important;
+    background-position: center top !important;
    
  }
   
